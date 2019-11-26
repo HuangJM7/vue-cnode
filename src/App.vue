@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Header />
-    <div class="main">
-      <router-view name="main"></router-view>
+    <div class="wraper">
+      <router-view name="main" class="main"></router-view>
       <router-view name="slidebar"></router-view>
     </div>
   </div>
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style>
-.main {
+.wraper {
   display: grid;
   grid-template-columns: auto 300px;
   width: 90vw;
@@ -31,9 +31,11 @@ export default {
   min-height: 400px;
   gap: 2px 20px;
 }
+.main{
+}
 
 @media screen and (max-width: 980px) {
-  .main {
+  .wraper {
     display: grid;
     grid-template-columns: auto;
     width: 90vw;

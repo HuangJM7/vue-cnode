@@ -92,7 +92,8 @@ export default {
 
 <style>
 @import url("../assets/markdown-github.css");
-.article{
+.article img{
+  display: block;
 }
 
 .topbar {
