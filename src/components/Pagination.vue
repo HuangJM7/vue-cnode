@@ -1,6 +1,7 @@
 <template>
   <div class="pagination">
     <button @click="changeBtn(currentPage - 1)">上一页</button>
+
     <button
       v-for="(btn, i) in pagebtns"
       @click="changeBtn(btn)"
@@ -9,6 +10,7 @@
     >
       {{ btn }}
     </button>
+
     <button @click="changeBtn(currentPage + 1)">下一页</button>
   </div>
 </template>
@@ -18,7 +20,7 @@ export default {
   name: "Pagination",
   data() {
     return {
-      currentPage: 1,
+      currentPage: 1
     };
   },
   methods: {
@@ -39,7 +41,7 @@ export default {
           result = [
             ...Array.from({ length: surplus }, (v, i) => i + 1),
             "...",
-            totals
+            total
           ];
         } else if (cur > endPosition) {
           //2.只有前边出现省略号
