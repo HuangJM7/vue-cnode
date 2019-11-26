@@ -1,7 +1,6 @@
 <template>
   <div class="pagination">
     <button @click="changeBtn(currentPage - 1)">上一页</button>
-    <button v-if="jduge" class="pagebtn">......</button>
     <button
       v-for="(btn, i) in pagebtns"
       @click="changeBtn(btn)"
@@ -20,7 +19,6 @@ export default {
   data() {
     return {
       currentPage: 1,
-      jduge: false
     };
   },
   methods: {

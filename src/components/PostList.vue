@@ -49,7 +49,7 @@
         </li>
         <li>
           <!--分页-->
-          <pagination @handleList="renderList"></pagination>
+          <Pagination @handleList="renderList"></Pagination>
         </li>
       </ul>
     </div>
@@ -57,7 +57,7 @@
 </template>
 
 <script>
-import pagination from "./Pagination";
+import Pagination from "./Pagination";
 
 export default {
   name: "PostList",
@@ -69,7 +69,7 @@ export default {
     };
   },
   components: {
-    pagination
+    Pagination
   },
   methods: {
     getData() {
