@@ -1,5 +1,8 @@
 # vue-cnode
 
+GitHub Page预览
+https://huangjm7.github.io/vue-cnode/dist/index.html
+
 ## Project setup
 ```
 yarn install
