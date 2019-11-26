@@ -11,7 +11,9 @@
         }"
       >
         <img :src="userinfo.avatar_url" alt="" />
+        <span class="loginname">{{ userinfo.loginname }}</span>
       </router-link>
+      <div>{{ userinfo.score }}积分</div>
     </div>
     <div class="recent_topics">
       <div class="topbar">作者最近主题</div>
@@ -138,9 +140,6 @@ img {
 
 .loginname {
   width: 100px;
-  float: right;
-  margin-top: 22px;
-  margin-right: 159px;
   font-size: 14px;
 }
 

@@ -8,8 +8,8 @@
       <section>
         <img :src="userinfo.avatar_url" />
         <span>{{ userinfo.loginname }}</span>
-        <p>{{ userinfo.score }}积分</p>
-        <p>注册时间：{{ userinfo.create_at | formatDate }}</p>
+        <div>{{ userinfo.score }}积分</div>
+        <div>注册时间：{{ userinfo.create_at | formatDate }}</div>
       </section>
       <div class="replies">
         <p>回复的主题</p>
