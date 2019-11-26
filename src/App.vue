@@ -1,28 +1,46 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header />
+    <div class="main">
+      <router-view name="main"></router-view>
+      <router-view name="slidebar"></router-view>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "./components/Header.vue";
+import PostList from "./components/PostList";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    Header,
+    PostList
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.main {
+  display: grid;
+  grid-template-columns: auto 300px;
+  width: 90vw;
+  max-width: 1400px;
+  margin: 15px auto;
+  min-height: 400px;
+  gap: 2px 20px;
+}
+
+@media screen and (max-width: 980px) {
+  .main {
+    display: grid;
+    grid-template-columns: auto;
+    width: 90vw;
+    margin: 15px auto;
+  }
+  #slidebar {
+    display: none;
+  }
 }
 </style>
